@@ -4,12 +4,12 @@ A sua missão é automatizar essa prática utilizando o GitHub Actions, para ace
 
 Por tanto, o seu workflow deverá conter os seguintes jobs: 
 
-a. Inserção de informação na API. PARA VALIDAR ENDPOINT DE POST
-b. Consulta de todos os dados inseridos. PARA VALIDAR O ENDPOINT DE GET
+    a. Inserção de informação na API. PARA VALIDAR ENDPOINT DE POST  
+    b. Consulta de todos os dados inseridos. PARA VALIDAR O ENDPOINT DE GET
 
 Passando nesses dois testes, a sua APP está pronta para subir para master, então podemos incluir um terceiro step: 
 
-c. Abrir um pull request entre master <> release 
+    c. Abrir um pull request entre master <> release 
 
 Para seguir nesse raciocínio, alguns pontos devem ser considerados: 
 
