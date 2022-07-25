@@ -1,18 +1,13 @@
-Você está construindo uma API para inserir as informações de usuário, juntamente com um grupo. Como é de prática, nesse repositório vocês optaram por trabalhar com duas branchs: master e release. Sempre que alguém finaliza uma tarefa importante (como inserir um novo endpoint), o push é feito diretamente na branch release e um pull request é aberto manualmente para enviar essas alterações para a branch principal. 
+## Links úteis
 
-A sua missão é automatizar essa prática utilizando o GitHub Actions, para acelerar o processo de teste e criação do pull request. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Github Actions Docs](https://docs.github.com/pt/actions)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Revisões de pull request](https://docs.github.com/pt/rest/pulls/reviews)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vercel](https://vercel.com/)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Heroku](https://dashboard.heroku.com/apps)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[API com Node.js - Heroku](https://www.youtube.com/watch?v=HyctLjnzUOM)  
 
-Por tanto, o seu workflow deverá conter os seguintes jobs: 
-
-    a. Inserção de informação na API. PARA VALIDAR ENDPOINT DE POST  
-    b. Consulta de todos os dados inseridos. PARA VALIDAR O ENDPOINT DE GET
-
-Passando nesses dois testes, a sua APP está pronta para subir para master, então podemos incluir um terceiro step: 
-
-    c. Abrir um pull request entre master <> release 
-
-Para seguir nesse raciocínio, alguns pontos devem ser considerados: 
-
-    1. Para conseguir abrir o pull request, você precisará ter acesso a API do GitHub e ter definido um secret dentro do seu repositório, para fazer a autenticação. 
-    2. Para testar os endpoints você pode criar uma docker-image, hospedá-la no DockerHub e abrir um novo serviço no seu workflow ou você pode fazer o deploy dessa aplicação utilizando o HEROKU. 
-    3. Como estamos falando de uma API , precisamos fazer com que esses dados persistam, uma opção rentável é utilizar o cluster do MongoDB Atlas. Dessa forma você não precisará fazer o deploy do seu banco, porque utilizará um aglomerado já existente e gratuito.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Notion 01](https://spangle-nannyberry-b54.notion.site/04-07-Introdu-o-Github-Workflow-Actions-8eb44fee907f4276a5978a5239d89141)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Notion 02](https://spangle-nannyberry-b54.notion.site/06-07-Gatilhos-7f7862f5e44c4a32aea6fc09a8cd011b)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Notion 03](https://spangle-nannyberry-b54.notion.site/18-07-Vari-veis-Criptografia-Express-es-9c37a43eb32d44d5b8590f84086edde0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Notion 04](https://spangle-nannyberry-b54.notion.site/20-07-Matrizes-e-Docker-Containers-f9dcaad9871942d5a11607848a333e07)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Notion 05](https://spangle-nannyberry-b54.notion.site/22-07-Pr-tica-Github-Actions-e-Docker-imagens-402c9f6e0297476eaa9d83aa5accd56b)  
