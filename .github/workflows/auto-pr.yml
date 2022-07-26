@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Register
         run: |
-          curl -X POST https://git.heroku.com/github-actions-challenge.git/register \
+          curl -X POST https://github-actions-challenge.herokuapp.com/register \
           -H "Content-Type: application/json" \
           -d '{"user":"Ceará", "pass":"Lessa"}'
       - name: Get users
-        run: curl https://git.heroku.com/github-actions-challenge.git/users
+        run: curl https://github-actions-challenge.herokuapp.com/users
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
