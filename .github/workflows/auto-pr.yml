@@ -1,0 +1,26 @@
+name: Create automatic Pull Request from release into main
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register
+        run: |
+          curl -X POST https://git.heroku.com/github-actions-challenge.git/register \
+          -H "Content-Type: application/json" \
+          -d '{"user":"Ceará", "pass":"Lessa"}'
+      - name: Get users
+        run: curl https://git.heroku.com/github-actions-challenge.git/users
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.AUTOPR }}
+          commit-message: Update main
+          title: Keep main up-to-date with release
+          branch: release
+          base: main
