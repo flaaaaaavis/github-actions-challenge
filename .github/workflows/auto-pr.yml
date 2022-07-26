@@ -22,5 +22,5 @@ jobs:
           token: ${{ secrets.AUTOPR }}
           commit-message: Update main
           title: Keep main up-to-date with release
-          head: release
-          base: main
+          branch: 'release'
+          base: 'main'
