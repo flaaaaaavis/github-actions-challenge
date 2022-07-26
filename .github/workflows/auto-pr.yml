@@ -23,5 +23,4 @@ jobs:
         with:
           commit-message: Update main
           title: Keep main up-to-date with release
-          branch: release
-          base: main
+          branch: main
