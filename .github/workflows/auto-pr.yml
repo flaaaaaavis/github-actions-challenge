@@ -15,8 +15,8 @@ jobs:
           curl -X POST https://github-actions-challenge.herokuapp.com/register \
           --header 'content-type:application/json' \
           --data '{
-            "user": "Ceará",
-            "pass": "Lessa"
+            user: "Ceará",
+            pass: "Lessa"
             }' \
           --fail
       - name: Get users
