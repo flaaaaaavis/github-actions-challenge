@@ -13,7 +13,7 @@ jobs:
       - name: Register
         run: |
           curl --request POST https://github-actions-challenge.herokuapp.com/register \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'authorization: Bearer ${{ secrets.AUTOPR }}' \
           --header 'content-type: application/json' \
           -data '{
             "user": "Ceará",
