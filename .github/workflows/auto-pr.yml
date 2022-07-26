@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Register
         run: |
-          curl -x POST \
+          curl -X POST \
           -H 'content-type:application/json'  \
           -d '{ user: "fravia", "pass": "abc" }'  \
           -fail  \
