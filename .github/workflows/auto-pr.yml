@@ -17,6 +17,8 @@ jobs:
       - name: Get users
         run: curl https://git.heroku.com/github-actions-challenge.git/users
       - name: Create Pull Request
+        env:
+          remote.origin.url: https://github.com/flaaaaaavis/github-actions-challenge
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.AUTOPR }}
