@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Register
         run: |
-          curl --request POST \
-          --url https://github-actions-challenge.herokuapp.com/register \
+          curl --request POST https://github-actions-challenge.herokuapp.com/register \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
           -data '{
