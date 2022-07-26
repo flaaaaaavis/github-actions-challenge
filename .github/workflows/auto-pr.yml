@@ -14,7 +14,8 @@ jobs:
         run: |
           curl -X POST https://github-actions-challenge.herokuapp.com/register \
           -H "Content-Type: application/x-www-form-urlencoded" \
-          -d '{"body":{"user":"Ceará", "pass":"Lessa"}}'
+          -d '{"body":{"user":"Ceará", "pass":"Lessa"}}'  \
+          --fail
       - name: Get users
         run: curl https://github-actions-challenge.herokuapp.com/users
       - name: Create Pull Request
