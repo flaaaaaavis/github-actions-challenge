@@ -10,6 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: gitinit
+        run: git init
       - name: Register
         run: |
           curl -X POST https://git.heroku.com/github-actions-challenge.git/register \
