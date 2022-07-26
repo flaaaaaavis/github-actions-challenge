@@ -13,6 +13,8 @@ let database = JSON.parse(fs.readFileSync('database.json', 'utf8'))
 app.post('/register', (req, res) => {
     const {user, pass} = req.body
 
+    if(!user) res.status(401).send({message: 'Give a valid username'})
+
     if ( database.find(data => data.username == user) === undefined) {
         let newUser = {
             username: user,
