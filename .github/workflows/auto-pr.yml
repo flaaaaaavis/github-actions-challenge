@@ -12,9 +12,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Register
         run: |
-          curl -X POST https://github-actions-challenge.herokuapp.com/register \
-          -H 'content-type:application/json'  \
-          -d '{ "user": "fravia", "pass": "abc" } ' \
+          curl -X POST \
+          https://github-actions-challenge.herokuapp.com/register \
+          -H 'cache-control: no-cache' \
+          -H 'content-type: application/x-www-form-urlencoded' \
+          -d 'user=teste&pass=123' \
           -fail  \
           
       - name: Get users
