@@ -4,14 +4,29 @@ on:
   push:
     branches:
       - release
-
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: gitinit
-        run: git init
+      - name: Create a label
+        run: |
+          labels=$(echo $(gh api -X GET /repos/${{ GITHUB.REPOSITORY }}/labels --jq='.[].name'))
+
+          if grep -q "auto-merge" <<< $labels
+          then
+              echo "Label already exists"
+          else
+            gh api -X POST /repos/${{GITHUB.REPOSITORY }}/labels \
+              -H "Accept: application/vnd.github.v3+json" \
+              -f name='auto-merge' \
+              -f description='Ready for new release!' \
+              -f color='f29513'
+            
+            echo "Label was successfully created" 
+          fi
       - name: Register
         run: |
           curl -X POST https://git.heroku.com/github-actions-challenge.git/register \
