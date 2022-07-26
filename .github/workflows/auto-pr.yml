@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Register
         run: |
-          curl -X POST \
-          --url https://github-actions-challenge.herokuapp.com/register \
-          --header "Content-Type: application/x-www-form-urlencoded" \
+          curl -X POST https://github-actions-challenge.herokuapp.com/register \
+          --header "Content-Type: application/json" \
           --data '{"user":"Ceará", "pass":"Lessa"}'  \
           --fail
       - name: Get users
